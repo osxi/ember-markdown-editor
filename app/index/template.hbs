@@ -1,5 +1,10 @@
-{{markdown-editor markdown=markdown
-                  key-up=(action "updateMarkdown")
-                  placeholder="Type your Markdown here!"}}
-
-{{chrome-window content=html}}
+<div class="row">
+  <div class="col s6">
+    {{markdown-editor markdown=markdown
+                      key-up=(action "updateMarkdown")
+                      placeholder="Type your Markdown here!"}}
+  </div>
+  <div class="col s6">
+    {{chrome-window content=html}}
+  </div>
+</div>
