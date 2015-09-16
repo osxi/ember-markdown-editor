@@ -2,7 +2,8 @@
   <div class="col s6 no-line-height">
     <h2 id="title" class="center-align">Markdown Editor</h2>
 
-    {{markdown-editor key-up=(action "updatePreview")}}
+    {{markdown-editor key-up=(action "updatePreview")
+    placeholder="Type some Markdown here"}}
   </div>
   <div class="col s6">
     {{chrome-window content=html}}

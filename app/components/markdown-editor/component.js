@@ -27,7 +27,7 @@ export default Ember.Component.extend({
   },
 
   _keyUpObserver: function() {
-    var html = marked(this.get('markdown') || '');
+    var html = marked(this.get('markdown') || 'Nothing to show right now :D');
 
     this.sendAction('key-up', html);
   }.observes('markdown').on('init')
