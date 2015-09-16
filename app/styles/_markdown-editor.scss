@@ -1,4 +1,9 @@
 .markdown-editor {
+  label {
+    display: inline-block;
+    margin-top: 1px;
+  }
+
   textarea {
     @extend .z-depth-3;
 

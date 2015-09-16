@@ -1,11 +1,13 @@
 {{#unless validRepo}}
   <div class="error">
     <i class="mdi-alert-warning"></i>
-    Invalid Repo. Please try something else.
+    Invalid Repository. Please try something else.
   </div>
+{{else}}
+  <label>GitHub Repository</label>
 {{/unless}}
 
 {{input value=repo enter="retrieveMarkdown"
-        placeholder="Repo; e.g., osxi/ember-markdown-editor"}}
+  placeholder="Repo; e.g., osxi/ember-markdown-editor"}}
 
 {{textarea name="editor" value=markdown placeholder=placeholder}}

@@ -20,7 +20,7 @@ export default Ember.Component.extend({
       var url = `https://rawgit.com/${repo}/master/README.md`;
 
       return icAjax(url).then(md => {
-        this.set('validRepo', true)
+        this.set('validRepo', true);
         this.set('markdown', md);
       }).catch(() => this.set('validRepo', false));
     }
