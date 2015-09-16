@@ -1,0 +1,21 @@
+.chrome-window {
+  @extend .z-depth-3;
+
+  .title-bar {
+    height: 72px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #B2B2B2;
+    background: url('/assets/images/title-bg.png') repeat-x;
+
+    .circle {
+      margin-left: 20px;
+    }
+  }
+
+  .content {
+    border: 1px solid #B2B2B2;
+    border-top: 0;
+    padding: 15px;
+  }
+}

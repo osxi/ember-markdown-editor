@@ -1,0 +1,13 @@
+.markdown-editor {
+  @extend .z-depth-3;
+
+  textarea {
+    width: 100%;
+    height: 300px;
+    background: url("/assets/images/paper.png") repeat-y;
+    font-family: monospace;
+    line-height: 25px;
+    padding: 2px 0 2px 108px;
+    border: 0;
+  }
+}

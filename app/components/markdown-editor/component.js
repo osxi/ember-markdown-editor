@@ -2,18 +2,11 @@ import Ember from 'ember';
 import marked from 'npm:marked';
 
 export default Ember.Component.extend({
-  didInsertElement() {
-    var $raw = this.$("textarea[name='editor']");
+  classNames: ['markdown-editor'],
 
-    this.$("textarea[name='editor']").on('keyup', () => {
-      this._updateMarkdown($raw);
-    });
-  },
+  _keyUpObserver: function() {
+    var html = marked(this.get('markdown'));
 
-  _updateMarkdown($raw) {
-    var raw = $raw.val();
-    var md  = marked(raw);
-
-    this.sendAction('key-up', md);
-  }
+    this.sendAction('key-up', html);
+  }.observes('markdown').on('init')
 });
