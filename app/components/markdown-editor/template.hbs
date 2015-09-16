@@ -1,1 +1,9 @@
+{{#unless validRepo}}
+  <div class="error">
+    invalid repo
+  </div>
+{{/unless}}
+{{input value=repo action="retrieveMarkdown"
+        placeholder="Repo; e.g., osxi/ember-markdown-editor"}}
+
 {{textarea name="editor" value=markdown placeholder=placeholder}}

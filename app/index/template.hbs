@@ -1,7 +1,8 @@
 <div class="row">
   <div class="col s6 no-line-height">
-    {{markdown-editor markdown="*Enter yer Markdown here*"
-                      key-up=(action "updatePreview")}}
+    <h2 id="title">Markdown Editor</h2>
+
+    {{markdown-editor key-up=(action "updatePreview")}}
   </div>
   <div class="col s6">
     {{chrome-window content=html}}

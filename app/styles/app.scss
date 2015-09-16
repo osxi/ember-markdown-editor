@@ -3,6 +3,10 @@
 @import 'markdown-editor';
 @import 'chrome-window';
 
+body {
+  padding-top: 11.25px;
+}
+
 .no-line-height {
   line-height: 0;
 }
