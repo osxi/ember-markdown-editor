@@ -6,21 +6,10 @@ moduleForComponent('chrome-window', 'Integration | Component | chrome window', {
 });
 
 test('it renders', function(assert) {
-  assert.expect(1);
-
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  assert.expect(2);
 
   this.render(hbs`{{chrome-window}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  // this.render(hbs`
-  //   {{#chrome-window}}
-  //     template block text
-  //   {{/chrome-window}}
-  // `);
-
-  // assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().find('.title-bar').length, 1);
+  assert.equal(this.$().find('.content').length, 1);
 });
