@@ -14,5 +14,8 @@
     "qunit": "~1.18.0",
     "materialize": "~0.97.0",
     "dom-ruler": "0.1.8"
+  },
+  "resolutions": {
+    "ember": "2.0.2"
   }
 }
