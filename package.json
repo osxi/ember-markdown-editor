@@ -46,6 +46,7 @@
     "ember-modal-dialog": "0.8.1",
     "ember-new-computed": "1.0.3",
     "ember-radio-button": "1.0.7",
+    "ember-sinon": "0.2.2",
     "marked": "^0.3.5"
   },
   "dependencies": {}

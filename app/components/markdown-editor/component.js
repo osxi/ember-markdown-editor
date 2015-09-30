@@ -5,6 +5,7 @@ import marked from 'npm:marked';
 export default Ember.Component.extend({
   classNames: ['markdown-editor'],
 
+  markdown: '',
   repo: 'osxi/ember-markdown-editor',
   validRepo: true,
 

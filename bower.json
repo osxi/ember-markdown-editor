@@ -13,7 +13,8 @@
     "loader.js": "ember-cli/loader.js#3.2.1",
     "qunit": "~1.18.0",
     "materialize": "~0.97.0",
-    "dom-ruler": "0.1.8"
+    "dom-ruler": "0.1.8",
+    "sinonjs": "~1.14.1"
   },
   "resolutions": {
     "ember": "2.0.2"

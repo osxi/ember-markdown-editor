@@ -10,3 +10,12 @@ test('it exists', function(assert) {
   var controller = this.subject();
   assert.ok(controller);
 });
+
+test('actions#updatePreview update html prop', function(assert) {
+  var controller = this.subject();
+  var html = '<marquee>foo</marquee>';
+
+  controller.send('updatePreview', html);
+
+  assert.equal(controller.get('html'), html);
+});
