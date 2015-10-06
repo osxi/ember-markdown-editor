@@ -1,6 +1,6 @@
 {
   "name": "ember-markdown-editor",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Small description for ember-markdown-editor goes here",
   "private": true,
   "directories": {
@@ -12,11 +12,11 @@
     "start": "ember server",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": "https://github.com/osxi/ember-markdown-editor",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.12.0"
   },
-  "author": "",
+  "author": "osxi",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
