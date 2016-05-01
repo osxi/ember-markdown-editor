@@ -2,23 +2,29 @@ import Ember from 'ember';
 import icAjax from 'ic-ajax';
 import marked from 'npm:marked';
 
-export default Ember.Component.extend({
-  classNames: ['markdown-editor'],
+const { isBlank, on, observer, Component } = Ember;
 
+export default Component.extend({
+  classNames: ['markdown-editor'],
   markdown: '',
   repo: 'osxi/ember-markdown-editor',
   validRepo: true,
 
   didInsertElement() {
-    if (!Ember.isBlank(this.get('repo'))) {
+    if (!isBlank(this.get('repo'))) {
       this.send('retrieveMarkdown');
     }
   },
 
+  _keyUpObserver: on('init', observer('markdown', function() {
+    let html = marked(this.getWithDefault('markdown'), 'Nothing to show right now :D');
+    this.sendAction('key-up', html);
+  })),
+
   actions: {
     retrieveMarkdown() {
-      var repo = this.get('repo');
-      var url = `https://rawgit.com/${repo}/master/README.md`;
+      let repo = this.get('repo');
+      let url = `https://raw.githubusercontent.com/${repo}/master/README.md`;
 
       return icAjax(url).then(md => {
         this.set('validRepo', true);
@@ -26,10 +32,4 @@ export default Ember.Component.extend({
       }).catch(() => this.set('validRepo', false));
     }
   },
-
-  _keyUpObserver: function() {
-    var html = marked(this.get('markdown') || 'Nothing to show right now :D');
-
-    this.sendAction('key-up', html);
-  }.observes('markdown').on('init')
 });
